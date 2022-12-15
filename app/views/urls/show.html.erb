@@ -1,0 +1,29 @@
+<h1 style="text-align:center; padding:20px; margin:20px">Urls Analytics</h1>
+<table  class="table css-serial">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Original Url</th>
+          <th scope="col">Shortened Url</th>
+          <th scope="col">Created Date</th>
+          <th scope = "col">Expiration Date</th>
+          <th scope="col">Active</th>
+        </tr>
+      </thead>
+    <tbody>
+        <% @urls.each do |url| %>
+        <tr>
+            <td></td>
+            <td><%= url.name%></td>
+            <td><%="http://localhost:3000/r?#{url.slug}" %></td>
+            <td><%=url.created_at %></td>
+            <td><%=url.expiration %></td>
+            <td><%=url.is_active %></td>
+        </tr>
+    </tbody> 
+      
+  <tr>
+   
+  </tr>
+  <% end %>
+ </table>

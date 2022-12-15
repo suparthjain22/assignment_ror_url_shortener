@@ -10,6 +10,7 @@ class Url < ApplicationRecord
   private
 
   def set_slug
-    SecureRandom.alphanumeric(5) if slug.nil?
+    slug = SecureRandom.alphanumeric(5) if slug.nil?
+    slug
   end
 end
